@@ -1,0 +1,238 @@
+/* Custom Creative Theme CSS */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Header */
+header {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 60px;
+}
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+}
+
+header .header-content-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+header hr {
+    margin: 30px auto;
+    border-color: #fff;
+}
+
+header p {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+/* Sections */
+.section-heading {
+    margin-top: 0;
+    font-size: 36px;
+}
+
+#about {
+    padding: 100px 0;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Services Section */
+#services {
+    padding: 100px 0;
+}
+
+.service-box {
+    max-width: 400px;
+    margin: 50px auto 0;
+}
+
+.service-box i {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 80px;
+}
+
+.service-box h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.service-box p {
+    font-size: 15px;
+}
+
+/* Portfolio */
+.portfolio-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.portfolio-box img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.portfolio-box-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 95, 64, 0.9);
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.portfolio-box:hover .portfolio-box-caption {
+    opacity: 1;
+}
+
+.portfolio-box-caption-content {
+    text-align: center;
+    width: 100%;
+}
+
+.project-category {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.project-name {
+    font-size: 22px;
+    font-family: 'Merriweather', serif;
+}
+
+/* Call to Action */
+aside {
+    padding: 100px 0;
+}
+
+.call-to-action h2 {
+    margin: 0 0 30px;
+    font-size: 36px;
+}
+
+/* Contact */
+#contact {
+    padding: 100px 0;
+}
+
+#contact i {
+    color: #222;
+    margin-bottom: 15px;
+}
+
+#contact p {
+    margin-bottom: 10px;
+}
+
+#contact a {
+    color: #F05F40;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Font Awesome Icons */
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fa-4x {
+    font-size: 4em;
+}
+
+.fa-3x {
+    font-size: 3em;
+}
+
+.text-primary {
+    color: #F05F40;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 35px !important;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .section-heading {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .service-box {
+        margin: 30px auto 0;
+    }
+}
+
+/* Smooth scroll offset for fixed nav */
+section {
+    scroll-margin-top: 60px;
+}

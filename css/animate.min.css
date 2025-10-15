@@ -1,0 +1,60 @@
+/* Minimal Animation CSS */
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes tada {
+    0% {
+        transform: scale(1);
+    }
+    10%, 20% {
+        transform: scale(0.9) rotate(-3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale(1.1) rotate(3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}
+
+.wow {
+    visibility: hidden;
+}
+
+.bounceIn {
+    animation-name: bounceIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    visibility: visible !important;
+}
+
+.tada {
+    animation-name: tada;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Auto-trigger animations on scroll (simplified) */
+.wow.bounceIn {
+    visibility: visible;
+    animation-name: bounceIn;
+}
