@@ -240,21 +240,44 @@ hr.primary {
 }
 
 @media (max-width: 767px) {
+    .navbar-header {
+        justify-content: space-between;
+        width: 100%;
+    }
+
     .navbar-toggle {
         display: block;
+        margin-left: auto;
     }
+
     .navbar-collapse {
         display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .navbar-collapse.collapse {
+
+    .navbar-collapse.show {
         display: block;
     }
+
     .navbar-nav {
         flex-direction: column;
     }
+
+    .navbar-nav a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+    }
+
     .navbar-right {
         margin-left: 0;
     }
+
     .col-md-6, .col-sm-6 {
         width: 100%;
     }

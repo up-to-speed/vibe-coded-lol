@@ -267,5 +267,29 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.navbar-toggle');
+            const navCollapse = document.querySelector('.navbar-collapse');
+
+            if (navToggle && navCollapse) {
+                navToggle.addEventListener('click', function() {
+                    navCollapse.classList.toggle('show');
+                    this.classList.toggle('active');
+                });
+
+                // Close menu when clicking a link
+                const navLinks = navCollapse.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        navCollapse.classList.remove('show');
+                        navToggle.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+
 </body>
 </html>
