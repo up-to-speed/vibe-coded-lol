@@ -334,8 +334,34 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Cookie Banner (thanks to https://news.ycombinator.com/item?id=45624294) -->
+    <div id="cookieBanner" style="position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #fff; padding: 30px 20px; box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.3); z-index: 9999; border-top: 3px solid #8b5cf6;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h3 style="margin: 0 0 15px 0; font-size: 20px; font-weight: 700;">🍪 We Value Your Privacy (Not Really)</h3>
+            <p style="margin: 0 0 20px 0; font-size: 14px; line-height: 1.6; opacity: 0.9;">
+                This website uses cookies, localStorage, sessionStorage, IndexedDB, WebSQL, browser fingerprinting, canvas fingerprinting, and probably your mom's maiden name to track literally everything you do. We share this data with 847 trusted partners including but not limited to: advertisers, data brokers, that sketchy startup in the Caymans, and anyone willing to pay $0.003 per record.
+                <br><br>
+                By clicking "Accept All" you agree to let us sell your data. By clicking "Reject All" you agree to let us sell your data anyway. By clicking "Customize" you get to pretend you have a choice while we still sell your data.
+                <br><br>
+                <a href="https://news.ycombinator.com/item?id=45624294" target="_blank" style="color: #8b5cf6; text-decoration: underline;">Someone asked</a> where the cookie banner was. Here you go.
+            </p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button onclick="acceptCookies()" style="background: #8b5cf6; color: #fff; border: none; padding: 12px 24px; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px;">Accept All (Sell My Soul)</button>
+                <button onclick="acceptCookies()" style="background: #64748b; color: #fff; border: none; padding: 12px 24px; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px;">Reject All (Sell My Soul Anyway)</button>
+                <button onclick="acceptCookies()" style="background: transparent; color: #fff; border: 2px solid #fff; padding: 12px 24px; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px;">Customize (Waste Time)</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Mobile Menu Toggle Script -->
     <script>
+        // Cookie banner
+        function acceptCookies() {
+            document.getElementById('cookieBanner').style.display = 'none';
+            // We're tracking you anyway, but now you feel better about it
+            console.log('User clicked a cookie button. Tracking intensifies.');
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             const navToggle = document.querySelector('.navbar-toggle');
             const navCollapse = document.querySelector('.navbar-collapse');
