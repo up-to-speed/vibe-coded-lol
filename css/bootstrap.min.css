@@ -59,8 +59,9 @@ body {
 
 /* Navigation */
 .navbar {
-    background: #fff;
-    border-bottom: 1px solid #ddd;
+    background: hsl(0, 0%, 100%);
+    border-bottom: 1px solid hsl(214.3, 31.8%, 91.4%);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .navbar-fixed-top {
@@ -69,6 +70,8 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
+    backdrop-filter: blur(8px);
+    background: hsla(0, 0%, 100%, 0.8);
 }
 
 .navbar-header {
@@ -129,42 +132,46 @@ body {
     color: #F05F40;
 }
 
-/* Buttons */
+/* Buttons - shadcn inspired */
 .btn {
-    display: inline-block;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 300px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border: 1px solid transparent;
+    border-radius: 6px;
     font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 500;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.2s;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .btn-primary {
-    background: #F05F40;
-    color: #fff;
+    background: hsl(222.2, 47.4%, 11.2%);
+    color: hsl(210, 40%, 98%);
+    border-color: hsl(222.2, 47.4%, 11.2%);
 }
 
 .btn-primary:hover {
-    background: #ee4b28;
+    background: hsl(222.2, 47.4%, 20%);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .btn-default {
-    background: #fff;
-    color: #222;
-    border: 2px solid #fff;
+    background: hsl(0, 0%, 100%);
+    color: hsl(222.2, 47.4%, 11.2%);
+    border: 1px solid hsl(214.3, 31.8%, 91.4%);
 }
 
 .btn-default:hover {
-    background: transparent;
-    color: #fff;
+    background: hsl(210, 40%, 96.1%);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .btn-xl {
-    padding: 18px 35px;
+    padding: 16px 32px;
     font-size: 16px;
 }
 
