@@ -144,12 +144,15 @@ body {
 }
 
 .btn-primary {
-    background: #F05F40;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #fff;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s;
 }
 
 .btn-primary:hover {
-    background: #ee4b28;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
 }
 
 .btn-default {
