@@ -335,7 +335,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Cookie Banner (thanks to https://news.ycombinator.com/item?id=45624294) -->
-    <div id="cookieBanner" style="position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #fff; padding: 30px 20px; box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.3); z-index: 9999; border-top: 3px solid #8b5cf6;">
+    <div id="cookieBanner" style="position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #fff; padding: 30px 20px; box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.3); z-index: 9999; border-top: 3px solid #8b5cf6; display: none;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <h3 style="margin: 0 0 15px 0; font-size: 20px; font-weight: 700;">🍪 We Value Your Privacy (Not Really)</h3>
             <p style="margin: 0 0 20px 0; font-size: 14px; line-height: 1.6; opacity: 0.9;">
@@ -356,11 +356,28 @@
     <!-- Mobile Menu Toggle Script -->
     <script>
         // Cookie banner
+        let cookieBannerShown = false;
+
         function acceptCookies() {
             document.getElementById('cookieBanner').style.display = 'none';
             // We're tracking you anyway, but now you feel better about it
             console.log('User clicked a cookie button. Tracking intensifies.');
         }
+
+        // Show cookie banner after scrolling halfway down the page
+        window.addEventListener('scroll', function() {
+            if (!cookieBannerShown) {
+                const scrollPosition = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+                const halfwayPoint = (documentHeight - windowHeight) / 2;
+
+                if (scrollPosition >= halfwayPoint) {
+                    document.getElementById('cookieBanner').style.display = 'block';
+                    cookieBannerShown = true;
+                }
+            }
+        });
 
         document.addEventListener('DOMContentLoaded', function() {
             const navToggle = document.querySelector('.navbar-toggle');
