@@ -74,7 +74,7 @@ header p {
 
 #about {
     padding: 100px 0;
-    background: linear-gradient(135deg, #F05F40 0%, #e73827 100%);
+    background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 50%, #2BFF88 100%);
 }
 
 #about p {
@@ -85,7 +85,7 @@ header p {
 /* Services Section */
 #services {
     padding: 100px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
 }
 
 .service-box {
@@ -160,7 +160,7 @@ header p {
 /* Call to Action */
 aside {
     padding: 100px 0;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    background: linear-gradient(135deg, #5f2c82 0%, #49a09d 100%);
 }
 
 .call-to-action h2 {
@@ -171,7 +171,7 @@ aside {
 /* Contact */
 #contact {
     padding: 100px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #F05F40 100%);
+    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
 }
 
 #contact i {
